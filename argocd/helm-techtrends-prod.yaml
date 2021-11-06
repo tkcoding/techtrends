@@ -1,4 +1,5 @@
-apiVersion: argoproj.io/v1alpha1                                                                                        kind: Application
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
   name: techtrends-prod
   namespace: argocd
@@ -10,6 +11,7 @@ spec:
   source:
     helm:
       valueFiles:
-        -values-prod.yaml                                                                                                                   valueFiles:                                                                                                             - values-prod.yaml
+        -values-prod.yaml
     path: helm
-    repoURL: https://github.com/tkcoding/techtrends                                                                         stargetRevision: HEAD
+    repoURL: https://github.com/tkcoding/techtrends
+    targetRevision: HEAD
