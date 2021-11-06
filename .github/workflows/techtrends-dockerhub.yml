@@ -29,4 +29,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: tkonthemove/techtrend:latest, tkonthemove/techtrends:v1.0.2
+          tags: tkonthemove/techtrends:latest, tkonthemove/techtrends:v1.0.2
