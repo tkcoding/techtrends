@@ -28,3 +28,21 @@
 20:13:53,499 root DEBUG About page rendered!
 20:13:53,501 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:13:53] "GET /about HTTP/1.1" 200 -
 20:13:53,513 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:13:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+20:52:15,73 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+20:52:15,74 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+20:52:18,806 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:18] "GET / HTTP/1.1" 200 -
+20:52:18,938 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:18] "GET /static/css/main.css HTTP/1.1" 200 -
+20:52:19,46 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+20:52:24,326 root DEBUG Article "2020 CNCF Annual Report" retrieved!
+20:52:24,328 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:24] "GET /1 HTTP/1.1" 200 -
+20:52:24,343 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:24] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+20:52:33,84 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:33] "GET /create HTTP/1.1" 200 -
+20:52:33,382 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+20:52:36,397 root DEBUG Article "asdasd" created!
+20:52:36,398 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:36] "[32mPOST /create HTTP/1.1[0m" 302 -
+20:52:36,401 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:36] "GET / HTTP/1.1" 200 -
+20:52:36,644 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+20:53:13,88 root DEBUG Article "KubeCon + CloudNativeCon 2021" retrieved!
+20:53:13,88 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:53:13] "GET /2 HTTP/1.1" 200 -
+20:53:13,103 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:53:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
