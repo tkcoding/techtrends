@@ -6,16 +6,16 @@ from datetime import datetime
 import logging
 
 # Count all database connections
-connection_count = 0
-
-
+# Define the Flask application
+app = Flask(__name__)
+app.config['connection_count'] = 0
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
-    global connection_count
+    # print(app.config['connection_count'])
     connection = sqlite3.connect("database.db")
     connection.row_factory = sqlite3.Row
-    connection_count += 1
+    app.config['connection_count'] = app.config['connection_count'] + 1
     return connection
 
 
@@ -27,9 +27,6 @@ def get_post(post_id):
     return post
 
 
-# Define the Flask application
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "your secret key"
 
 
 # Define the main route of the web application
@@ -102,7 +99,7 @@ def metrics():
     posts = connection.execute("SELECT * FROM posts").fetchall()
     connection.close()
     post_count = len(posts)
-    data = {"db_connection_count": connection_count, "post_count": post_count}
+    data = {"db_connection_count": app.config['connection_count'], "post_count": post_count}
     return data
 
 

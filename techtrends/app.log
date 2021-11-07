@@ -1,48 +1,290 @@
-20:11:38,892 werkzeug WARNING  * Running on all addresses.
+10:53:00,173 werkzeug WARNING  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-20:11:38,893 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
-20:11:49,480 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:11:49] "GET / HTTP/1.1" 200 -
-20:11:49,622 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:11:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:11:49,704 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:11:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-20:11:51,263 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:11:51] "GET /create HTTP/1.1" 200 -
-20:11:51,276 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:11:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:11:58,638 root DEBUG Article "testingpost" created!
-20:11:58,638 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:11:58] "[32mPOST /create HTTP/1.1[0m" 302 -
-20:11:58,643 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:11:58] "GET / HTTP/1.1" 200 -
-20:11:58,885 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:11:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:12:01,45 root DEBUG Article "testingpost" retrieved!
-20:12:01,47 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:01] "GET /9 HTTP/1.1" 200 -
-20:12:01,59 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:12:02,771 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:02] "GET / HTTP/1.1" 200 -
-20:12:03,68 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:12:04,264 root DEBUG Article "2020 CNCF Annual Report" retrieved!
-20:12:04,265 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:04] "GET /1 HTTP/1.1" 200 -
-20:12:04,280 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:12:05,884 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:05] "GET / HTTP/1.1" 200 -
-20:12:06,184 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:12:07,69 root DEBUG Article "KubeCon + CloudNativeCon 2021" retrieved!
-20:12:07,70 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:07] "GET /2 HTTP/1.1" 200 -
-20:12:07,82 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:12:07,648 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:07] "GET / HTTP/1.1" 200 -
-20:12:07,948 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:12:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:13:53,499 root DEBUG About page rendered!
-20:13:53,501 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:13:53] "GET /about HTTP/1.1" 200 -
-20:13:53,513 werkzeug INFO 127.0.0.1 - - [31/Oct/2021 20:13:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:52:15,73 werkzeug WARNING  * Running on all addresses.
+10:53:00,173 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+10:53:03,425 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 37, in index
+    print(app.config['connection_count'])
+KeyError: 'connection_count'
+10:53:03,428 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 10:53:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+11:01:41,43 werkzeug WARNING  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-20:52:15,74 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
-20:52:18,806 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:18] "GET / HTTP/1.1" 200 -
-20:52:18,938 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:18] "GET /static/css/main.css HTTP/1.1" 200 -
-20:52:19,46 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-20:52:24,326 root DEBUG Article "2020 CNCF Annual Report" retrieved!
-20:52:24,328 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:24] "GET /1 HTTP/1.1" 200 -
-20:52:24,343 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:24] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:52:33,84 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:33] "GET /create HTTP/1.1" 200 -
-20:52:33,382 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:52:36,397 root DEBUG Article "asdasd" created!
-20:52:36,398 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:36] "[32mPOST /create HTTP/1.1[0m" 302 -
-20:52:36,401 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:36] "GET / HTTP/1.1" 200 -
-20:52:36,644 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:52:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-20:53:13,88 root DEBUG Article "KubeCon + CloudNativeCon 2021" retrieved!
-20:53:13,88 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:53:13] "GET /2 HTTP/1.1" 200 -
-20:53:13,103 werkzeug INFO 127.0.0.1 - - [06/Nov/2021 20:53:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:01:41,44 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:01:43,819 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:01:43] "GET / HTTP/1.1" 200 -
+11:01:43,945 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:01:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:02:11,692 app ERROR Exception on /4 [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 47, in post
+    post = get_post(post_id)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 24, in get_post
+    connection = get_db_connection()
+TypeError: get_db_connection() missing 1 required positional argument: 'connection_count'
+11:02:11,693 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:02:11] "[35m[1mGET /4 HTTP/1.1[0m" 500 -
+11:02:14,89 app ERROR Exception on /3 [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 47, in post
+    post = get_post(post_id)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 24, in get_post
+    connection = get_db_connection()
+TypeError: get_db_connection() missing 1 required positional argument: 'connection_count'
+11:02:14,90 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:02:14] "[35m[1mGET /3 HTTP/1.1[0m" 500 -
+11:05:46,717 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:05:46,717 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:05:53,556 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:05:53] "GET / HTTP/1.1" 200 -
+11:05:53,674 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:05:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:05:57,381 app ERROR Exception on /1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 48, in post
+    post = get_post(post_id)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 25, in get_post
+    connection = get_db_connection()
+TypeError: get_db_connection() missing 1 required positional argument: 'connection_count'
+11:05:57,382 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:05:57] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+11:06:31,842 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:06:31,843 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:06:54,986 app ERROR Exception on /1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 48, in post
+    post = get_post(post_id)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 25, in get_post
+    connection = get_db_connection()
+TypeError: get_db_connection() missing 1 required positional argument: 'connection_count'
+11:06:54,990 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:06:54] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+11:06:54,992 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:06:54] "GET / HTTP/1.1" 200 -
+11:06:54,996 app ERROR Exception on /1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 48, in post
+    post = get_post(post_id)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 25, in get_post
+    connection = get_db_connection()
+TypeError: get_db_connection() missing 1 required positional argument: 'connection_count'
+11:06:54,997 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:06:54] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+11:06:57,522 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:06:57,522 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:08:13,172 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:08:13] "GET / HTTP/1.1" 200 -
+11:08:13,178 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:08:13] "GET / HTTP/1.1" 200 -
+11:08:13,179 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:08:13] "GET / HTTP/1.1" 200 -
+11:08:13,328 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:08:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:08:15,534 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:08:15,534 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:08:21,645 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:08:21] "GET / HTTP/1.1" 200 -
+11:08:21,780 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:08:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:08:42,950 app ERROR Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 48, in post
+    post = get_post(post_id)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 25, in get_post
+    connection = get_db_connection()
+TypeError: get_db_connection() missing 1 required positional argument: 'connection_count'
+11:08:42,952 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:08:42] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+11:08:42,962 app ERROR Exception on /1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 48, in post
+    post = get_post(post_id)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 25, in get_post
+    connection = get_db_connection()
+TypeError: get_db_connection() missing 1 required positional argument: 'connection_count'
+11:08:42,963 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:08:42] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+11:09:04,906 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:09:04,906 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:09:07,845 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:09:07] "GET / HTTP/1.1" 200 -
+11:09:07,967 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:09:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:09:09,213 app ERROR Exception on /1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 47, in post
+    post = get_post(post_id)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 25, in get_post
+    post = connection.execute("SELECT * FROM posts WHERE id = ?", (post_id,)).fetchone()
+AttributeError: 'tuple' object has no attribute 'execute'
+11:09:09,214 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:09:09] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+11:09:48,956 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:09:48,957 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:09:51,697 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:09:51] "GET / HTTP/1.1" 200 -
+11:09:51,820 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:09:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:09:52,657 root DEBUG Article "2020 CNCF Annual Report" retrieved!
+11:09:52,659 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:09:52] "GET /1 HTTP/1.1" 200 -
+11:09:52,955 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:09:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:12:18,207 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:12:18,207 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:12:20,855 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 35, in index
+    connection = get_db_connection()
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 19, in get_db_connection
+    return connection,connection_count
+NameError: name 'connection_count' is not defined
+11:12:20,857 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:12:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+11:12:56,629 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:12:56,630 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:12:58,808 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 36, in index
+    app.config['connection_count'] = connection_count
+NameError: name 'connection_count' is not defined
+11:12:58,813 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:12:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+11:13:47,416 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:13:47,417 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:13:49,291 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:13:49] "GET / HTTP/1.1" 200 -
+11:13:49,414 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:13:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:13:51,727 root DEBUG Article "2020 CNCF Annual Report" retrieved!
+11:13:51,729 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:13:51] "GET /1 HTTP/1.1" 200 -
+11:13:52,26 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:13:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:14:16,946 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:14:16] "GET / HTTP/1.1" 200 -
+11:14:16,960 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:14:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:14:17,831 root DEBUG Article "CNCF Cloud Native Interactive Landscape" retrieved!
+11:14:17,831 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:14:17] "GET /4 HTTP/1.1" 200 -
+11:14:18,131 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:14:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:14:22,91 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:14:22] "[33mGET /healtz HTTP/1.1[0m" 404 -
+11:14:29,389 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:14:29] "GET /healthz HTTP/1.1" 200 -
+11:14:45,797 app ERROR Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 98, in metrics
+    connection,connection_count = get_db_connection(app.config['connection_count'])
+TypeError: get_db_connection() takes 0 positional arguments but 1 was given
+11:14:45,799 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:14:45] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+11:15:01,983 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:15:01,983 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:15:05,528 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:05] "GET / HTTP/1.1" 200 -
+11:15:05,649 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:15:05,771 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:15:06,794 root DEBUG Article "2020 CNCF Annual Report" retrieved!
+11:15:06,796 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:06] "GET /1 HTTP/1.1" 200 -
+11:15:06,810 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:15:07,719 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:07] "GET / HTTP/1.1" 200 -
+11:15:08,17 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:15:08,832 root DEBUG Article "KubeCon + CloudNativeCon 2021" retrieved!
+11:15:08,833 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:08] "GET /2 HTTP/1.1" 200 -
+11:15:08,846 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:15:09,297 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:09] "GET / HTTP/1.1" 200 -
+11:15:09,597 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:15:13,785 app ERROR Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 102, in metrics
+    data = {"db_connection_count": connection_count, "post_count": post_count}
+NameError: name 'connection_count' is not defined
+11:15:13,789 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:13] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+11:15:50,314 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:15:50,314 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:15:52,13 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:52] "GET /metrics HTTP/1.1" 200 -
+11:15:57,686 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:57] "GET /metrics HTTP/1.1" 200 -
+11:15:59,527 root DEBUG Article "2020 CNCF Annual Report" retrieved!
+11:15:59,532 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:59] "GET /1 HTTP/1.1" 200 -
+11:15:59,661 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:15:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:16:00,989 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:16:00] "GET / HTTP/1.1" 200 -
+11:16:01,3 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:16:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:16:04,450 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:16:04] "GET /metrics HTTP/1.1" 200 -

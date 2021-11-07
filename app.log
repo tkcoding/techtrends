@@ -1,0 +1,55 @@
+10:14:44,107 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+10:14:44,107 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+10:14:54,581 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 38, in index
+    connection = get_db_connection()
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 17, in get_db_connection
+    connection_count += 1
+UnboundLocalError: local variable 'connection_count' referenced before assignment
+10:14:54,583 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 10:14:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+10:14:55,463 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 10:14:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10:15:20,288 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 38, in index
+    connection = get_db_connection()
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 17, in get_db_connection
+    connection_count += 1
+UnboundLocalError: local variable 'connection_count' referenced before assignment
+10:15:20,289 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 10:15:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+10:15:45,636 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+10:15:45,637 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+10:15:52,901 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 38, in index
+    connection = get_db_connection()
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 17, in get_db_connection
+    connection_count += 1
+UnboundLocalError: local variable 'connection_count' referenced before assignment
+10:15:52,902 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 10:15:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
