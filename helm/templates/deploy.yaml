@@ -2,15 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: techtrends
+    app: {{ .Values.appname }}
     tag: latest
-  name: techtrends
+  name: {{ .Values.appname }}
   namespace: {{ .Values.namespace.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: techtrends
+      app: {{ .Values.appname }}
       tag: latest
   strategy:
     rollingUpdate:
@@ -20,13 +20,13 @@ spec:
   template:
     metadata:
       labels:
-        app: techtrends
+        app: {{ .Values.appname }}
         tag: latest
     spec:
       containers:
-      - image: tkonthemove/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+      - image: {{ .Values.image.dockerRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        name: techtrends
+        name: {{ .Values.appname }}
         ports:
         - containerPort: {{ .Values.containerPort }}
         readinessProbe:

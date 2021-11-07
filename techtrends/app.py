@@ -18,7 +18,7 @@ def get_db_connection():
         else:
             raise RuntimeError('Failed to open database')
     except sqlite3.OperationalError:
-        logging.debug('Database.db is not properly defined. please run python init_db.py!')
+        logging.error('Database.db is not properly defined. please run python init_db.py!')
 
     connection.row_factory = sqlite3.Row
     app.config['connection_count'] = app.config['connection_count'] + 1
@@ -50,10 +50,10 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-        logging.debug('Article with id "{id}" does not exist!'.format(id=post_id))
+        logging.error('Article with id %s does not exist!',post_id)
         return render_template("404.html"), 404
     else:
-        logging.debug('Article "{title}" retrieved!'.format(title=post["title"]))
+        logging.debug('Article %s retrieved!',post["title"])
         return render_template("post.html", post=post)
 
 
@@ -80,7 +80,7 @@ def create():
             )
             connection.commit()
             connection.close()
-            logging.debug('Article "{title}" created!'.format(title=title))
+            logging.debug('Article %s created!',title)
             return redirect(url_for("index"))
     return render_template("create.html")
 
@@ -108,16 +108,21 @@ def metrics():
     data = {"db_connection_count": app.config['connection_count'], "post_count": post_count}
     return data
 
+def initialize_logger():
+    log_level = os.getenv("LOGLEVEL", "DEBUG").upper()
+    log_level = (
+        getattr(logging, log_level)
+        if log_level in ["CRITICAL", "DEBUG", "ERROR", "INFO", "WARNING",]
+        else logging.DEBUG
+    )
+
+    logging.basicConfig(
+        format='%(levelname)s:%(name)s:%(asctime)s, %(message)s',
+                level=log_level,
+    )
 
 # start the application on port 3111
 if __name__ == "__main__":
     ## stream logs to a file
-    logname = "app.log"
-    logging.basicConfig(
-        filename=logname,
-        filemode="a",
-        format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
-        datefmt="%H:%M:%S",
-        level=logging.DEBUG,
-    )
+    initialize_logger()
     app.run(host="0.0.0.0", port="3111")

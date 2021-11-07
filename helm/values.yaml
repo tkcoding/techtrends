@@ -1,6 +1,7 @@
 namespace:
   name: sandbox
 
+appname: techtrends
 service:
   port: 4111
   targetPort: 3111
@@ -11,6 +12,7 @@ image:
   repository: techtrends
   tag: latest
   pullPolicy: IfNotPresent
+  dockerRegistry: tkonthemove
 
 replicaCount: 1
 
