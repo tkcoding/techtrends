@@ -1,5 +1,5 @@
 import sqlite3
-
+import os
 from flask import Flask, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 from datetime import datetime
@@ -12,8 +12,14 @@ app.config['connection_count'] = 0
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
-    # print(app.config['connection_count'])
-    connection = sqlite3.connect("database.db")
+    try:
+        if os.path.exists("database.db"):
+            connection = sqlite3.connect("database.db")
+        else:
+            raise RuntimeError('Failed to open database')
+    except sqlite3.OperationalError:
+        logging.debug('Database.db is not properly defined. please run python init_db.py!')
+
     connection.row_factory = sqlite3.Row
     app.config['connection_count'] = app.config['connection_count'] + 1
     return connection

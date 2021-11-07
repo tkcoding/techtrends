@@ -288,3 +288,112 @@ NameError: name 'connection_count' is not defined
 11:16:00,989 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:16:00] "GET / HTTP/1.1" 200 -
 11:16:01,3 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:16:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 11:16:04,450 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:16:04] "GET /metrics HTTP/1.1" 200 -
+11:18:22,805 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:18:22,806 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:18:27,254 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:18:27] "GET / HTTP/1.1" 200 -
+11:18:27,386 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:18:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:18:28,375 root DEBUG Article "2020 CNCF Annual Report" retrieved!
+11:18:28,377 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:18:28] "GET /1 HTTP/1.1" 200 -
+11:18:28,674 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:18:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:18:31,21 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:18:31] "GET / HTTP/1.1" 200 -
+11:18:31,34 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:18:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:18:47,747 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:18:47,747 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:18:53,89 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 38, in index
+    posts = connection.execute("SELECT * FROM posts").fetchall()
+sqlite3.OperationalError: no such table: posts
+11:18:53,93 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:18:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+11:20:36,182 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:20:36,182 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:20:38,469 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 38, in index
+    posts = connection.execute("SELECT * FROM posts").fetchall()
+sqlite3.OperationalError: no such table: posts
+11:20:38,470 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:20:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+11:23:11,93 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:23:11,93 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:23:17,365 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 40, in index
+    posts = connection.execute("SELECT * FROM posts").fetchall()
+sqlite3.OperationalError: no such table: posts
+11:23:17,366 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:23:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+11:33:04,792 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:33:04,792 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:33:14,546 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 41, in index
+    connection = get_db_connection()
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 16, in get_db_connection
+    if os.path.exists("database.db"):
+NameError: name 'os' is not defined
+11:33:14,547 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:33:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+11:33:34,752 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:33:34,752 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:33:42,151 app ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 41, in index
+    connection = get_db_connection()
+  File "C:\Users\User\Desktop\GithubCode\TechTrends\techtrends\techtrends\app.py", line 19, in get_db_connection
+    raise RuntimeError('Failed to open database')
+RuntimeError: Failed to open database
+11:33:42,152 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:33:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+11:34:11,550 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+11:34:11,550 werkzeug INFO  * Running on http://192.168.1.8:3111/ (Press CTRL+C to quit)
+11:34:16,571 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:34:16] "GET / HTTP/1.1" 200 -
+11:34:16,691 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:34:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:34:17,392 root DEBUG Article "2020 CNCF Annual Report" retrieved!
+11:34:17,394 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:34:17] "GET /1 HTTP/1.1" 200 -
+11:34:17,691 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:34:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+11:34:18,875 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:34:18] "GET / HTTP/1.1" 200 -
+11:34:18,889 werkzeug INFO 127.0.0.1 - - [07/Nov/2021 11:34:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
